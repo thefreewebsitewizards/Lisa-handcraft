@@ -37,7 +37,7 @@ export function AboutPage() {
           >
             <div className="absolute -inset-4 bg-pink-100 rounded-3xl -z-10 rotate-2" />
             <img 
-              src="https://images.unsplash.com/photo-1456086272160-b28b380aa9bc?auto=format&fit=crop&w=800&q=80" 
+              src="/lisa-about.png" 
               alt="Lisa crafting" 
               className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]"
             />
