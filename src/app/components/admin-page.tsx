@@ -54,6 +54,7 @@ export function AdminPage() {
     p.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+
   const handleEdit = (product: Product) => {
     setActiveProduct(product);
     setView('form');
@@ -75,6 +76,7 @@ export function AdminPage() {
       setIsDeleting(false);
     }
   };
+
 
   const handleLogout = async () => {
     if (isWorking) return;
