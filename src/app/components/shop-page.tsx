@@ -116,12 +116,27 @@ export function ShopPage() {
                   <div className="flex items-center justify-between pt-4 border-t border-secondary">
                     <span className="text-xl font-bold text-primary">${product.price.toFixed(2)}</span>
                     {product.allowsPersonalization && (
-                      <div className="flex items-center gap-1 text-xs font-medium text-muted-foreground bg-secondary px-2 py-1 rounded-md">
+                      <div className="hidden md:flex items-center gap-1 text-xs font-medium text-muted-foreground bg-secondary px-2 py-1 rounded-md">
                         <Heart className="h-3 w-3 text-primary fill-primary" />
                         Personalizable
                       </div>
                     )}
+                    <button
+                      onClick={() => {
+                        setSelectedProductId(product.id);
+                        setCurrentPage('product');
+                      }}
+                      className="md:hidden bg-primary text-primary-foreground text-xs font-bold px-4 py-2 rounded-full shadow-sm"
+                    >
+                      View Details
+                    </button>
                   </div>
+                  {product.allowsPersonalization && (
+                    <div className="mt-3 md:hidden inline-flex items-center gap-1 text-xs font-medium text-muted-foreground bg-secondary px-2 py-1 rounded-md">
+                      <Heart className="h-3 w-3 text-primary fill-primary" />
+                      Personalizable
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
